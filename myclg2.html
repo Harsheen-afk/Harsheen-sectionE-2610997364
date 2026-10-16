@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My College - Chitkara University</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            background-image:
+                linear-gradient(
+                    rgba(10, 20, 50, 0.65),
+                    rgba(10, 20, 50, 0.65)
+                ),
+                url("https://www.vidyalive.com/uploads/uni_slider_image/b347f238a91ba4fc6e46b70485b84666.webp");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: #222;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            background-color: rgba(10, 20, 50, 0.95);
+
+            padding: 18px;
+
+            text-align: center;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            margin: 0 12px;
+
+            padding: 9px 13px;
+
+            border-radius: 20px;
+        }
+
+        nav a:hover {
+            background-color: #e63946;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            height: 520px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.60);
+
+            padding: 45px;
+
+            border-radius: 20px;
+
+            width: 80%;
+
+            max-width: 900px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero h1 {
+            font-size: 55px;
+
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+
+            line-height: 1.6;
+        }
+
+
+        /* SECTIONS */
+
+        section {
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            padding: 40px;
+
+            background-color: rgba(255,255,255,0.96);
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+
+
+        h2 {
+            color: #b5121b;
+
+            border-bottom: 3px solid #b5121b;
+
+            padding-bottom: 10px;
+        }
+
+
+        h3 {
+            color: #333;
+        }
+
+
+        p {
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        /* COLLEGE PHOTOS */
+
+        .college-image {
+            width: 100%;
+
+            height: 400px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            margin: 20px 0;
+
+            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+        }
+
+
+        /* PHOTO GALLERY */
+
+        .photo-gallery {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 20px;
+        }
+
+        .photo-gallery img {
+            width: 300px;
+
+            height: 210px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+
+            transition: 0.3s;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* LISTS */
+
+        ul, ol {
+            line-height: 2;
+
+            font-size: 16px;
+        }
+
+
+        /* CARDS */
+
+        .cards {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+
+            min-width: 220px;
+
+            background: linear-gradient(
+                135deg,
+                #fff1f2,
+                #ffffff
+            );
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            border-left: 5px solid #b5121b;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+
+        /* FACILITIES */
+
+        .facility {
+            background-color: #fff5f5;
+
+            margin: 15px 0;
+
+            padding: 18px 22px;
+
+            border-radius: 12px;
+
+            border-left: 5px solid #b5121b;
+        }
+
+
+        /* LINKS */
+
+        .links a {
+            display: block;
+
+            color: #9d111a;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            padding: 12px;
+
+            margin: 10px 0;
+
+            background-color: #fff1f2;
+
+            border-radius: 8px;
+        }
+
+        .links a:hover {
+            background-color: #b5121b;
+
+            color: white;
+        }
+
+
+        /* BOOKMARKS */
+
+        .bookmarks {
+            text-align: center;
+
+            padding: 20px;
+
+            background-color: #fff1f2;
+
+            border-radius: 15px;
+        }
+
+        .bookmarks a {
+            color: #9d111a;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            margin: 10px;
+        }
+
+        .bookmarks a:hover {
+            color: #000;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background-color: rgba(10,20,50,0.95);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+            margin-top: 50px;
+        }
+
+
+        /* MOBILE */
+
+        @media(max-width: 700px) {
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero-content {
+                width: 90%;
+
+                padding: 25px;
+            }
+
+            nav a {
+                display: inline-block;
+
+                margin: 5px;
+            }
+
+            section {
+                width: 94%;
+
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body id="top">
+
+
+<!-- ================================================= -->
+<!-- NAVIGATION -->
+<!-- ================================================= -->
+
+<nav>
+
+    <a href="#top">Home</a>
+
+    <a href="#about">About</a>
+
+    <a href="#courses">Courses</a>
+
+    <a href="#faculty">Faculty</a>
+
+    <a href="#facilities">Facilities</a>
+
+    <a href="#gallery">Gallery</a>
+
+    <a href="#links">Links</a>
+
+</nav>
+
+
+
+<!-- ================================================= -->
+<!-- HOME -->
+<!-- ================================================= -->
+
+<div class="hero">
+
+    <div class="hero-content">
+
+        <h1>Chitkara University</h1>
+
+        <p>
+            <strong>My College</strong>
+        </p>
+
+        <p>
+            Explore the campus, courses, faculty and facilities
+            of Chitkara University.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- ABOUT -->
+<!-- ================================================= -->
+
+<section id="about">
+
+    <h2>Introduction</h2>
+
+
+    <!-- ACTUAL CHITKARA CAMPUS PHOTO -->
+
+    <img
+        class="college-image"
+        src="https://www.vidyalive.com/uploads/uni_slider_image/b347f238a91ba4fc6e46b70485b84666.webp"
+        alt="Chitkara University Punjab Campus"
+    >
+
+
+    <p>
+
+        <b>Chitkara University</b> is a private university
+        located in Punjab. The university campus is situated
+        on the Chandigarh-Patiala National Highway.
+
+    </p>
+
+
+    <p>
+
+        Chitkara University provides a supportive environment
+        where students come together to pursue their academic
+        and personal goals.
+
+    </p>
+
+
+    <p>
+
+        The university focuses on
+        <strong>learning, creativity, innovation and
+        practical education.</strong>
+
+    </p>
+
+
+    <p>
+
+        Students get opportunities to develop their skills
+        through academics, clubs, sports, events and
+        extracurricular activities.
+
+    </p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- COURSES -->
+<!-- ================================================= -->
+
+<section id="courses">
+
+    <h2>Courses Offered</h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>MBA</h3>
+
+            <p>
+                Master of Business Administration with
+                different areas of specialisation.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Engineering</h3>
+
+            <p>
+                Programs including Computer Science,
+                Mechanical, Civil and Electronics Engineering.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>B.Sc Nursing</h3>
+
+            <p>
+                Programs designed to develop skilled
+                healthcare professionals.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Computer Science</h3>
+
+            <p>
+                Programs focused on programming,
+                technology and computer applications.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Arts & Sciences</h3>
+
+            <p>
+                Programs covering subjects such as
+                English, Psychology and Sociology.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <h2>Schools / Departments</h2>
+
+    <ol>
+
+        <li>Chitkara School of Management</li>
+
+        <li>Chitkara School of Engineering</li>
+
+        <li>Chitkara School of Nursing</li>
+
+        <li>Chitkara School of Computer Science</li>
+
+        <li>Chitkara School of Arts and Sciences</li>
+
+    </ol>
+
+
+    <h2>Subjects Offered by Each Department</h2>
+
+
+    <ol>
+
+        <li>
+            <b>Chitkara School of Management</b>
+
+            <ul>
+
+                <li>Administration</li>
+
+                <li>Marketing</li>
+
+                <li>Finance</li>
+
+                <li>Human Resource Management</li>
+
+                <li>International Business</li>
+
+            </ul>
+
+        </li>
+
+
+        <li>
+            <b>Chitkara School of Engineering</b>
+
+            <ul>
+
+                <li>Computer Science and Engineering</li>
+
+                <li>Electronics and Communication Engineering</li>
+
+                <li>Mechanical Engineering</li>
+
+                <li>Civil Engineering</li>
+
+            </ul>
+
+        </li>
+
+
+        <li>
+            <b>Chitkara School of Nursing</b>
+
+            <ul>
+
+                <li>B.Sc Nursing</li>
+
+                <li>M.Sc Nursing</li>
+
+            </ul>
+
+        </li>
+
+
+        <li>
+            <b>Chitkara School of Computer Science</b>
+
+            <ul>
+
+                <li>Computer Science</li>
+
+                <li>Information Technology</li>
+
+            </ul>
+
+        </li>
+
+
+        <li>
+            <b>Chitkara School of Arts and Sciences</b>
+
+            <ul>
+
+                <li>English Literature</li>
+
+                <li>Psychology</li>
+
+                <li>Sociology</li>
+
+                <li>Political Science</li>
+
+            </ul>
+
+        </li>
+
+    </ol>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- FACULTY -->
+<!-- ================================================= -->
+
+<section id="faculty">
+
+    <h2>Faculty</h2>
+
+
+    <p>
+
+        Chitkara University faculty members include
+        experienced academicians, researchers and
+        industry professionals who contribute to the
+        learning experience of students.
+
+    </p>
+
+
+    <ul>
+
+        <li>Dr. Madhu Chitkara - Chancellor</li>
+
+        <li>Dr. Ashok Chitkara - Vice Chancellor</li>
+
+        <li>Dr. Ritu Arora - Pro Vice Chancellor</li>
+
+        <li>Dean - School of Management</li>
+
+        <li>Dean - School of Engineering</li>
+
+        <li>Dean - School of Nursing</li>
+
+        <li>Dean - School of Computer Science</li>
+
+        <li>Dean - School of Arts and Sciences</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- FACILITIES -->
+<!-- ================================================= -->
+
+<section id="facilities">
+
+    <h2>Facilities</h2>
+
+
+    <div class="facility">
+
+        <h3>📚 Library</h3>
+
+        <p>
+            The university library provides books,
+            journals, e-resources and research material
+            for students and faculty.
+        </p>
+
+    </div>
+
+
+    <div class="facility">
+
+        <h3>🔬 Laboratories</h3>
+
+        <p>
+            Well-equipped laboratories provide students
+            with opportunities for practical learning,
+            experimentation and research.
+        </p>
+
+    </div>
+
+
+    <div class="facility">
+
+        <h3>🍽️ Cafeteria</h3>
+
+        <p>
+            The campus cafeteria provides students with
+            different meals, snacks and beverages.
+        </p>
+
+    </div>
+
+
+    <div class="facility">
+
+        <h3>🏫 Modern Classrooms</h3>
+
+        <p>
+            Modern classrooms and technology-supported
+            learning spaces help create an interactive
+            learning environment.
+        </p>
+
+    </div>
+
+
+    <div class="facility">
+
+        <h3>🏠 Hostels</h3>
+
+        <p>
+            Hostel facilities provide students with
+            comfortable accommodation during their studies.
+        </p>
+
+    </div>
+
+
+    <div class="facility">
+
+        <h3>⚽ Sports Facilities</h3>
+
+        <p>
+            The university campus provides sports and
+            recreational facilities for students.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- REAL CHITKARA PHOTO GALLERY -->
+<!-- ================================================= -->
+
+<section id="gallery">
+
+    <h2>Chitkara University Campus Gallery</h2>
+
+    <p>
+        Some glimpses of the Chitkara University Punjab campus.
+    </p>
+
+
+    <div class="photo-gallery">
+
+
+        <!-- CHITKARA BUILDING -->
+
+        <img
+            src="https://www.collegebatch.com/519-chitkara-university-campus-tour-rajpura"
+            alt="Chitkara University Campus"
+        >
+
+
+        <!-- AERIAL CAMPUS PHOTO -->
+
+        <img
+            src="https://www.vidyalive.com/uploads/uni_slider_image/b347f238a91ba4fc6e46b70485b84666.webp"
+            alt="Chitkara University Aerial View"
+        >
+
+
+        <!-- CHITKARA BUILDING -->
+
+        <img
+            src="https://assets.kollegeapply.com/images/1750766436910-1742463645phpXHOc8I.jpeg"
+            alt="Chitkara University Building"
+        >
+
+
+        <!-- CAMPUS VIEW -->
+
+        <img
+            src="https://need4study.com/uploads/institutions/images/5660762/.resized/564x400/main_photo-dnD38xz63.jpg?v=1540469046"
+            alt="Chitkara University Campus"
+        >
+
+
+        <!-- CAMPUS ENTRANCE -->
+
+        <img
+            src="https://www.chitkara.edu.in/pdf/2016/brochure/chitkara-college-of-education.pdf"
+            alt="Chitkara University Entrance"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- LINKS -->
+<!-- ================================================= -->
+
+<section id="links">
+
+    <h2>Useful Links</h2>
+
+
+    <div class="links">
+
+        <a
+            href="https://www.chitkara.edu.in/"
+            target="_blank"
+        >
+            🌐 Chitkara University Official Website
+        </a>
+
+
+        <a
+            href="https://www.chitkara.edu.in/academics/"
+            target="_blank"
+        >
+            📖 Academics at Chitkara University
+        </a>
+
+
+        <a
+            href="https://www.chitkara.edu.in/admissions/"
+            target="_blank"
+        >
+            🎓 Admissions at Chitkara University
+        </a>
+
+
+        <a
+            href="https://www.chitkara.edu.in/campus-life/"
+            target="_blank"
+        >
+            🏫 Campus Life at Chitkara University
+        </a>
+
+
+        <a
+            href="https://www.chitkara.edu.in/contact-us/"
+            target="_blank"
+        >
+            📞 Contact Chitkara University
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- BOOKMARKS -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>Bookmarks</h2>
+
+
+    <div class="bookmarks">
+
+        <a href="#top">Home</a>
+
+        |
+
+        <a href="#about">About</a>
+
+        |
+
+        <a href="#courses">Courses</a>
+
+        |
+
+        <a href="#faculty">Faculty</a>
+
+        |
+
+        <a href="#facilities">Facilities</a>
+
+        |
+
+        <a href="#gallery">Gallery</a>
+
+        |
+
+        <a href="#links">Links</a>
+
+
+        <br><br>
+
+        <a href="#top">⬆ Back to Top</a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- FOOTER -->
+<!-- ================================================= -->
+
+<footer>
+
+    <h3>Chitkara University</h3>
+
+    <p>
+        My College Website
+    </p>
+
+    <p>
+        Created using HTML
+    </p>
+
+    <p>
+        © 2026
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

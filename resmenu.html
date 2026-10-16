@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Restaurant Menu</title>
+</head>
+
+<body>
+
+    <h1>Interactive Restaurant Menu</h1>
+
+    <p>Click on a food item to learn more about it.</p>
+
+    <img src="foodmenu.png"
+         alt="Restaurant food menu"
+         usemap="#foodmap"
+         width="800"
+         height="450">
+
+    <map name="foodmap">
+
+        <!-- Pizza - Circle -->
+        <area shape="circle"
+              coords="390,300,70"
+              href="https://en.wikipedia.org/wiki/Pizza"
+              alt="Pizza"
+              target="_blank">
+
+        <!-- Burger - Circle -->
+        <area shape="circle"
+              coords="670,110,55"
+              href="https://en.wikipedia.org/wiki/Hamburger"
+              alt="Burger"
+              target="_blank">
+
+        <!-- French Fries - Rectangle -->
+        <area shape="rect"
+              coords="540,190,650,290"
+              href="https://en.wikipedia.org/wiki/French_fries"
+              alt="French Fries"
+              target="_blank">
+
+        <!-- Menu Card - Rectangle -->
+        <area shape="rect"
+              coords="10,10,180,120"
+              href="https://en.wikipedia.org/wiki/Menu"
+              alt="Menu Card"
+              target="_blank">
+
+        <!-- Sandwich - Polygon -->
+        <area shape="poly"
+              coords="20,260,100,230,160,270,130,350,40,340"
+              href="https://en.wikipedia.org/wiki/Sandwich"
+              alt="Sandwich"
+              target="_blank">
+
+        <!-- Cake Slice - Polygon -->
+        <area shape="poly"
+              coords="440,30,540,20,570,100,500,130"
+              href="https://en.wikipedia.org/wiki/Cake"
+              alt="Cake Slice"
+              target="_blank">
+
+        <!-- Remaining Area - Default -->
+        <area shape="default"
+              href="https://en.wikipedia.org/wiki/Food"
+              alt="Other Area"
+              target="_blank">
+
+    </map>
+
+</body>
+</html>

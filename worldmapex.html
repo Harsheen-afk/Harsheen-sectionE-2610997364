@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World Map Explorer</title>
+</head>
+
+<body>
+
+    <h1>🌍 World Map Explorer</h1>
+
+    <p>Click on a country to learn more about it.</p>
+
+    <img src="worldmap.png"
+         alt="World Map"
+         usemap="#worldmap"
+         width="940"
+         height="477">
+
+    <map name="worldmap">
+
+        <!-- United States - Rectangle -->
+        <area shape="rect"
+              coords="110,145,250,230"
+              href="https://en.wikipedia.org/wiki/United_States"
+              alt="United States"
+              target="_blank">
+
+        <!-- Brazil - Polygon -->
+        <area shape="poly"
+              coords="270,275,315,265,350,290,355,350,330,390,290,370,270,330"
+              href="https://en.wikipedia.org/wiki/Brazil"
+              alt="Brazil"
+              target="_blank">
+
+        <!-- United Kingdom - Circle -->
+        <area shape="circle"
+              coords="460,145,15"
+              href="https://en.wikipedia.org/wiki/United_Kingdom"
+              alt="United Kingdom"
+              target="_blank">
+
+        <!-- India - Polygon -->
+        <area shape="poly"
+              coords="635,235,675,230,700,260,685,300,655,325,640,290"
+              href="https://en.wikipedia.org/wiki/India"
+              alt="India"
+              target="_blank">
+
+        <!-- China - Rectangle -->
+        <area shape="rect"
+              coords="665,175,755,250"
+              href="https://en.wikipedia.org/wiki/China"
+              alt="China"
+              target="_blank">
+
+        <!-- Australia - Polygon -->
+        <area shape="poly"
+              coords="720,325,790,315,835,345,825,390,775,405,730,380"
+              href="https://en.wikipedia.org/wiki/Australia"
+              alt="Australia"
+              target="_blank">
+
+        <!-- Japan - Circle -->
+        <area shape="circle"
+              coords="790,215,15"
+              href="https://en.wikipedia.org/wiki/Japan"
+              alt="Japan"
+              target="_blank">
+
+        <!-- France - Rectangle -->
+        <area shape="rect"
+              coords="465,175,505,210"
+              href="https://en.wikipedia.org/wiki/France"
+              alt="France"
+              target="_blank">
+
+        <!-- Russia - Polygon -->
+        <area shape="poly"
+              coords="500,100,600,75,700,90,770,120,750,175,650,165,580,150,510,145"
+              href="https://en.wikipedia.org/wiki/Russia"
+              alt="Russia"
+              target="_blank">
+
+        <area shape="default"
+              href="https://en.wikipedia.org/wiki/World"
+              alt="Other area"
+              target="_blank">
+
+    </map>
+
+</body>
+</html>
